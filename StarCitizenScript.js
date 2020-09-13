@@ -56,10 +56,11 @@ function get_stats(version_number) {
     let stats = {
         scheduled: 0,
         development: 0,
+        development_done: 0,
+        development_total: 0,
         polished: 0,
         released: 0,
-        task_percentage_done: 0,
-        task_percentage_total: 0,
+       
 
     }
     for (let category of r.getElementsByClassName(OPEN_RELEASE_CATEGORIES_HOLDER_CLASS_NAME)) {
@@ -92,14 +93,14 @@ function get_stats(version_number) {
                 stats.polished += 1
             } else {
                 let vals = p.innerText.split('/')
-                stats.task_percentage_total += parseInt(vals[1])
-                stats.task_percentage_done += parseInt(vals[0])
+                stats.development_total += parseInt(vals[1])
+                stats.development_done += parseInt(vals[0])
             }
 
         }
 
     }
-    stats.percentage = stats.task_percentage_done / stats.task_percentage_total
+    stats.percentage = stats.development_done / stats.development_total
     for (let p in stats) {
         console.log(p, " : ", stats[p])
     }
