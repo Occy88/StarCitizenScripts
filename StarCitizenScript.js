@@ -1,3 +1,10 @@
+/**
+* Made this quickly for anyone who wants a script that gets stats from the star citizen roadmap website
+* paste it into the console and type get_stats(version_number)
+* e.g. get_stats(3.11)
+*/
+
+
 const RELEASE_SECTION_HOLDER_CLASS_NAME = "Board__Releases-c7lmub-15 ftcDnO"
 
 const CLOSED_RELEASE_NAME_CLASS_NAME = "Release__Name-sc-1y9ya50-3 kTRWwp"
@@ -96,4 +103,5 @@ function get_stats(version_number) {
     }
     return stats;
 }
+get_stats(3.11)
 
