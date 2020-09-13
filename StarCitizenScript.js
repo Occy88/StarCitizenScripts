@@ -1,7 +1,9 @@
 /**
-* Made this quickly for anyone who wants a script that gets stats from the star citizen roadmap website
-* paste it into the console and type get_stats(version_number)
-* e.g. get_stats(3.11)
+* This script is for: https://robertsspaceindustries.com/roadmap/board/1-Star-Citizen
+* Purpose: gives you quick stats on any release version e.g.t 3.11, 3.12...
+* to use: copy and paste this into console of website. then type get_stats(version_number) e.g. get_stats(3.11)
+* To open console: ctrl+shift+i then choose console tab
+* e.g: get_stats(3.11)
 */
 
 
@@ -103,5 +105,4 @@ function get_stats(version_number) {
     }
     return stats;
 }
-get_stats(3.11)
 
